@@ -5,6 +5,8 @@ import org.junit.Test;
 
 public class RhymersJUnitTest {
 
+	// TODO redundant tests for Rhymers, can be automated
+
 	@Test
 	public void testCountIn() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();

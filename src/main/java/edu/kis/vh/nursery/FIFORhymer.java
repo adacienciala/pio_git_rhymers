@@ -4,6 +4,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+    // TODO use curly braces, even for oneliners - won't cause problems when different people look at the code
     @Override
     public int countOut() {
         while (!callCheck())

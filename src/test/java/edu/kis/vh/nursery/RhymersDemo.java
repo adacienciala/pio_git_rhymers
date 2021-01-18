@@ -11,6 +11,12 @@ class RhymersDemo {
 		testRhymers(factory);
 	}
 
+	/*
+	TODO:
+	- magic numbers (15, 3)
+	- use enhanced fors for clarity
+	 */
+
 	private static void testRhymers(Rhymersfactory factory) {
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
 				factory.getFIFORhymer(), factory.getHanoiRhymer()};
