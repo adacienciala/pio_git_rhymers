@@ -6,8 +6,7 @@ public class IntLinkedList {
     private int i;
 
     public void push(int i) {
-        if (last == null)
-            last = new Node(i);
+        if (last == null) last = new Node(i);
         else {
             last.next = new Node(i);
             last.next.setPrev(last);
