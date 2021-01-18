@@ -8,9 +8,9 @@ public class IntLinkedList {
     public void push(int i) {
         if (last == null) last = new Node(i);
         else {
-            last.next = new Node(i);
-            last.next.setPrev(last);
-            last = last.next;
+            last.setNext(new Node(i));
+            last.getNext().setPrev(last);
+            last = last.getNext();
         }
     }
 
