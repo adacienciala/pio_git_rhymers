@@ -4,20 +4,16 @@ public class IntLinkedList {
 
     private class Node {
 
-        private int value;
+        private final int value;
         private Node prev;
         private Node next;
 
         protected Node(int i) {
-            setValue(i);
+            this.value = i;
         }
 
         public int getValue() {
             return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
         }
 
         public Node getPrev() {
