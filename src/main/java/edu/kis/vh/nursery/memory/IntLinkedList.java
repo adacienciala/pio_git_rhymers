@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.memory;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntMemory {
 
     private class Node {
 
@@ -35,7 +35,9 @@ public class IntLinkedList {
 
     private Node last;
     private int i;
+    private int size = 0;
 
+    @Override
     public void push(int i) {
         if (last == null) last = new Node(i);
         else {
@@ -43,28 +45,39 @@ public class IntLinkedList {
             last.getNext().setPrev(last);
             last = last.getNext();
         }
+        size++;
     }
 
+    @Override
     public boolean isEmpty() {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int top() {
         if (isEmpty())
             return -1;
         return last.getValue();
     }
 
+    @Override
     public int pop() {
         if (isEmpty())
             return -1;
         int ret = last.getValue();
         last = last.getPrev();
+        size--;
         return ret;
+    }
+
+    @Override
+    public int getTotal() {
+        return size;
     }
 
 }

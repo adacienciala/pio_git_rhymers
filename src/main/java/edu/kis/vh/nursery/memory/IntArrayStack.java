@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.memory;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntMemory {
 
     public static final int MAX_SIZE = 12;
     public static final int FULL = MAX_SIZE-1;
@@ -20,8 +20,28 @@ public class IntArrayStack {
         return total == INITIAL;
     }
 
+    @Override
+    public void push(int i) {
+        countIn(i);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return callCheck();
+    }
+
     public boolean isFull() {
         return total == FULL;
+    }
+
+    @Override
+    public int top() {
+        return peekaboo();
+    }
+
+    @Override
+    public int pop() {
+        return countOut();
     }
 
     protected int peekaboo() {
