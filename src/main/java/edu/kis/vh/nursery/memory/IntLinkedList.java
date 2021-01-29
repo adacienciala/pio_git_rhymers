@@ -35,7 +35,7 @@ public class IntLinkedList implements IntMemory {
 
     private Node last;
     private int i;
-    private int size = DEFAULT;
+    private int size = INITIAL;
 
     @Override
     public void push(int i) {
