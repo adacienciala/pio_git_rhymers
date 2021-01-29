@@ -5,6 +5,10 @@ import edu.kis.vh.nursery.memory.IntMemory;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
+    // IntArrayStack is the best option here, looking at the type of operations.
+    // We are performing a lot of accessing, no inserting in the middle.
+    // Inserting in the middle or at the beginning would be LinkedList's edge.
+    // With an array, we sacrifice dynamic-size over memory taken (Nodes take up space).
     private final IntArrayStack temp = new IntArrayStack();
 
     public FIFORhymer() {
