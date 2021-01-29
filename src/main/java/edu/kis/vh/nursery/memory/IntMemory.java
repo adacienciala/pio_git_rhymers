@@ -2,6 +2,9 @@ package edu.kis.vh.nursery.memory;
 
 public interface IntMemory {
 
+    int INITIAL = -1;
+    int DEFAULT = 0;
+
     void push(int i);
 
     boolean isEmpty();
