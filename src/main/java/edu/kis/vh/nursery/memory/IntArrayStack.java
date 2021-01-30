@@ -4,6 +4,7 @@ public class IntArrayStack implements IntMemory {
 
     public static final int MAX_SIZE = 12;
     public static final int FULL = MAX_SIZE-1;
+    public static final int INITIAL = -1;
 
     private final int[] numbers = new int[MAX_SIZE];
 
