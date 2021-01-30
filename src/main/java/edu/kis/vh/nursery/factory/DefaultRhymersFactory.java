@@ -18,8 +18,6 @@ public class DefaultRhymersFactory implements Rhymersfactory {
         return new DefaultCountingOutRhymer();
     }
 
-    // TODO: method identical to getStandardRhymer()
-
     /**
      * Creates and returns a FalseRhymer
      * @return DefaultCountingRhymer object
