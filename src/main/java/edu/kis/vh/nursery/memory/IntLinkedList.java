@@ -39,7 +39,9 @@ public class IntLinkedList implements IntMemory {
 
     @Override
     public void push(int i) {
-        if (last == null) last = new Node(i);
+        if (last == null) {
+            last = new Node(i);
+        }
         else {
             last.setNext(new Node(i));
             last.getNext().setPrev(last);
@@ -60,15 +62,17 @@ public class IntLinkedList implements IntMemory {
 
     @Override
     public int top() {
-        if (isEmpty())
+        if (isEmpty()) {
             return DEFAULT;
+        }
         return last.getValue();
     }
 
     @Override
     public int pop() {
-        if (isEmpty())
+        if (isEmpty()) {
             return DEFAULT;
+        }
         int ret = last.getValue();
         last = last.getPrev();
         size--;

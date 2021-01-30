@@ -11,8 +11,9 @@ public class IntArrayStack implements IntMemory {
     private int total = INITIAL;
 
     public void countIn(int in) {
-        if (!isFull())
+        if (!isFull()) {
             numbers[++total] = in;
+        }
     }
 
     public boolean callCheck() {
@@ -44,14 +45,16 @@ public class IntArrayStack implements IntMemory {
     }
 
     protected int peekaboo() {
-        if (callCheck())
+        if (callCheck()) {
             return DEFAULT;
+        }
         return numbers[total];
     }
 
     public int countOut() {
-        if (callCheck())
+        if (callCheck()) {
             return DEFAULT;
+        }
         return numbers[total--];
     }
 

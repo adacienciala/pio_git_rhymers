@@ -19,16 +19,17 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         super(intMemory);
     }
 
-    // TODO use curly braces, even for oneliners - won't cause problems when different people look at the code
     @Override
     public int countOut() {
-        while (!callCheck())
+        while (!callCheck()) {
             temp.countIn(super.countOut());
+        }
 
         int ret = temp.countOut();
 
-        while (!temp.callCheck())
+        while (!temp.callCheck()) {
             countIn(temp.countOut());
+        }
 
         return ret;
     }
